@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+
 class LoopExampleTest {
 
     LoopExample loop = new LoopExample();

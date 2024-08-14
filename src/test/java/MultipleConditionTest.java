@@ -11,20 +11,24 @@ class MultipleConditionTest {
         Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(true, true, false, true));
         Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(true, true, false, false));
         Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(true, false, true, true));
+        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(false, true, true, true));
+        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(false, false, true, true));
+
+    }
+
+    @Test
+    void testNoDiscountConditions() {
         Assertions.assertEquals("No Discount", multiple.checkConditions(true, false, true, false));
         Assertions.assertEquals("No Discount", multiple.checkConditions(true, false, false, true));
         Assertions.assertEquals("No Discount", multiple.checkConditions(true, false, false, false));
-        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(false, true, true, true));
         Assertions.assertEquals("No Discount", multiple.checkConditions(false, true, true, false));
         Assertions.assertEquals("No Discount", multiple.checkConditions(false, true, false, true));
         Assertions.assertEquals("No Discount", multiple.checkConditions(false, true, false, false));
-        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(false, false, true, true));
         Assertions.assertEquals("No Discount", multiple.checkConditions(false, false, true, false));
         Assertions.assertEquals("No Discount", multiple.checkConditions(false, false, false, true));
         Assertions.assertEquals("No Discount", multiple.checkConditions(false, false, false, false));
 
     }
-
 
     /*
     *Para asegurar una cobertura completa de condición múltiple (MC/DC) en el método checkConditions,

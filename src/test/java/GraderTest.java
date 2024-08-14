@@ -1,7 +1,7 @@
-
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class GraderTest {
 
@@ -18,55 +18,55 @@ class GraderTest {
     @Test
     void limiteF() {
         Grader grader = new Grader();
-        assertEquals('F', grader.determineLetterGrade(59));
+        Assertions.assertEquals('F', grader.determineLetterGrade(59));
 
     }
 
     @Test
     void limiteSuperiorD() {
         Grader grader = new Grader();
-        assertEquals('D', grader.determineLetterGrade(69));
+        Assertions.assertEquals('D', grader.determineLetterGrade(69));
     }
 
     @Test
     void limiteinferiorD() {
         Grader grader = new Grader();
-        assertEquals('D', grader.determineLetterGrade(60));
+        Assertions.assertEquals('D', grader.determineLetterGrade(60));
     }
 
     @Test
     void limiteSuperiorC() {
         Grader grader = new Grader();
-        assertEquals('C', grader.determineLetterGrade(79));
+        Assertions.assertEquals('C', grader.determineLetterGrade(79));
     }
 
     @Test
     void limiteInferiorC() {
         Grader grader = new Grader();
-        assertEquals('C', grader.determineLetterGrade(70));
+        Assertions.assertEquals('C', grader.determineLetterGrade(70));
     }
 
     @Test
     void limiteSuperiorB() {
         Grader grader = new Grader();
-        assertEquals('B', grader.determineLetterGrade(89));
+        Assertions.assertEquals('B', grader.determineLetterGrade(89));
     }
 
     @Test
     void limiteInferiorB() {
         Grader grader = new Grader();
-        assertEquals('B', grader.determineLetterGrade(80));
+        Assertions.assertEquals('B', grader.determineLetterGrade(80));
     }
 
     @Test
     void limiteSuperiorA() {
         Grader grader = new Grader();
-        assertEquals('A', grader.determineLetterGrade(99));
+        Assertions.assertEquals('A', grader.determineLetterGrade(99));
     }
 
     @Test
-    void limiteInferiorNotaA() {
+    void limiteInferiorA() {
         Grader grader = new Grader();
-        assertEquals('A', grader.determineLetterGrade(99));
+        Assertions.assertEquals('A', grader.determineLetterGrade(90));
     }
 }
