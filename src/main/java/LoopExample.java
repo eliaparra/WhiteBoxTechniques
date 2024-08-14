@@ -22,10 +22,10 @@ public class LoopExample {
 * Complex Loops: Bucle con condiciones internas y múltiples puntos de salida
     *
     * */
-    public int sumNaturalNumbers(int N) {
+    public int sumNaturalNumbers(int number) {
         int sum = 0;
 
-        for (int i = 1; i <= N; i++) {
+        for (int i = 1; i <= number; i++) {
             sum += i;
         }
 

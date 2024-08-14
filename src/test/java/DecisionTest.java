@@ -3,70 +3,79 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class DecisionTest {
+class DecisionTest {
 
     //Tests for IF
 
     @Test
-    public void menorqueCero(){
+    void menorqueCero() {
         Decision decision = new Decision();
         assertThrows(IllegalArgumentException.class,
                 () -> {
-                    decision.processInput(-2,"a");
+                    decision.processInput(-2, "a");
                 });
     }
+
     @Test
-    public void igualCero(){
+    void igualCero() {
         Decision decision = new Decision();
-        Assertions.assertEquals(decision.processInput(0,"a"),"Zero - Category A");
+        Assertions.assertEquals("Zero - Category A", decision.processInput(0, "a"));
 
 
     }
+
     @Test
-    public void menorDiez(){
+    void menorDiez() {
         Decision decision = new Decision();
-        Assertions.assertEquals(decision.processInput(9,"a"),"Single digit - Category A");
+        Assertions.assertEquals("Single digit - Category A", decision.processInput(9, "a"));
     }
+
     @Test
-    public void igualDiez(){
+    void igualDiez() {
         Decision decision = new Decision();
-        Assertions.assertEquals(decision.processInput(10,"a"),"Double digits - Category A");
+        Assertions.assertEquals("Double digits - Category A", decision.processInput(10, "a"));
     }
+
     @Test
-    public void menorCien(){
+    void menorCien() {
         Decision decision = new Decision();
-        Assertions.assertEquals(decision.processInput(99,"a"),"Double digits - Category A");
+        Assertions.assertEquals("Double digits - Category A", decision.processInput(99, "a"));
     }
+
     @Test
-    public void igualCien(){
+    void igualCien() {
         Decision decision = new Decision();
-        Assertions.assertEquals(decision.processInput(100,"a"),"Large number - Category A");
+        Assertions.assertEquals("Large number - Category A", decision.processInput(100, "a"));
     }
+
     @Test
-    public void mayorCien(){
+    void mayorCien() {
         Decision decision = new Decision();
-        Assertions.assertEquals(decision.processInput(150,"a"),"Large number - Category A");
+        Assertions.assertEquals("Large number - Category A", decision.processInput(150, "a"));
     }
     // Test for SWITCH CASE
 
     @Test
-    public void categoryA(){
+    void categoryA() {
         Decision decision = new Decision();
-        Assertions.assertEquals(decision.processInput(1,"a"),"Single digit - Category A");
+        Assertions.assertEquals("Single digit - Category A", decision.processInput(1, "a"));
     }
+
     @Test
-    public void categoryB(){
+    void categoryB() {
         Decision decision = new Decision();
-        Assertions.assertEquals(decision.processInput(1,"b"),"Single digit - Category B");
+        Assertions.assertEquals("Single digit - Category B", decision.processInput(1, "b"));
     }
+
     @Test
-    public void categoryC(){
+    void categoryC() {
         Decision decision = new Decision();
-        Assertions.assertEquals(decision.processInput(1,"c"),"Single digit - Category C");
+        Assertions.assertEquals("Single digit - Category C", decision.processInput(1, "c"));
     }
+
     @Test
-    public void unknownCategory(){
+    void unknownCategory() {
         Decision decision = new Decision();
-        Assertions.assertEquals(decision.processInput(1,"d"),"Single digit - Unknown category");
+        Assertions.assertEquals("Single digit - Unknown category", decision.processInput(1, "d"));
     }
 }
