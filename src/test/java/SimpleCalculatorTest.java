@@ -2,38 +2,43 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SimpleCalculatorTest {
+class SimpleCalculatorTest {
 
     @Test
-    void dosMasDosSonCuatro(){
+    void dosMasDosSonCuatro() {
         SimpleCalculator calculator = new SimpleCalculator();
-        assertEquals(calculator.sumar(2,2),4);
+        assertEquals(4, calculator.sumar(2, 2));
 
     }
+
     @Test
-    void unNumeroNegativo(){
+    void unNumeroNegativo() {
         SimpleCalculator calculator = new SimpleCalculator();
-        assertEquals(calculator.sumar(-1,2),1);
+        assertEquals(1, calculator.sumar(-1, 2));
 
     }
+
     @Test
-    void multiplicarPositvos(){
+    void multiplicarPositvos() {
         SimpleCalculator calculator = new SimpleCalculator();
-        assertEquals(calculator.multiplicar(2,2),4);
+        assertEquals(4, calculator.multiplicar(2, 2));
     }
+
     @Test
-    void multiplicarNegativos(){
+    void multiplicarNegativos() {
         SimpleCalculator calculator = new SimpleCalculator();
-        assertEquals(calculator.multiplicar(-2,-3),6);
+        assertEquals(6, calculator.multiplicar(-2, -3));
     }
+
     @Test
-    void multiplicarPositivoYNegativo(){
+    void multiplicarPositivoYNegativo() {
         SimpleCalculator calculator = new SimpleCalculator();
-        assertEquals(calculator.multiplicar(2,-3),-6);
+        assertEquals(-6, calculator.multiplicar(2, -3));
     }
+
     @Test
-    void multiplicarCero(){
+    void multiplicarCero() {
         SimpleCalculator calculator = new SimpleCalculator();
-        assertEquals(calculator.multiplicar(0,-3),0);
+        assertEquals(0, calculator.multiplicar(0, -3));
     }
 }

@@ -65,7 +65,7 @@ class GraderTest {
     }
 
     @Test
-    void limiteInferiorA() {
+    void limiteInferiorNotaA() {
         Grader grader = new Grader();
         assertEquals('A', grader.determineLetterGrade(99));
     }

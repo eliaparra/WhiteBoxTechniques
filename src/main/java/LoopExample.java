@@ -2,7 +2,7 @@ public class LoopExample {
     /**
      * Calcula la suma de los primeros N números naturales.
      *
-     * @param N El número hasta el cual se deben sumar los números naturales.
+     * @param number El número hasta el cual se deben sumar los números naturales.
      * @return La suma de los primeros N números naturales.
      */
 

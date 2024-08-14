@@ -1,71 +1,81 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ModificatedConditionTest {
+class ModificatedConditionTest {
 
     //Test first IF
     @Test
-    public void first(){
+    void first() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(true, false, true,50),0.20);
+        Assertions.assertEquals(0.20,mCondition.calculateDiscount(true, false, true, 50));
     }
+
     @Test
-    public void second(){
+    void second() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(false, false, false,150),0.00);
+        Assertions.assertEquals(0.00,mCondition.calculateDiscount(false, false, false, 150));
     }
+
     @Test
-    public void third(){
+    void third() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(false, true, false,50),0.10);
+        Assertions.assertEquals(0.10,mCondition.calculateDiscount(false, true, false, 50));
     }
+
     // Test Else if (is member $$ hasCoupon)
     @Test
-    public void forth(){
+    void forth() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(true, true, false,50),0.15);
+        Assertions.assertEquals(0.15,mCondition.calculateDiscount(true, true, false, 50));
     }
+
     @Test
-    public void fifth(){
+    void fifth() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(true, true, true,50),0.2);
+        Assertions.assertEquals(0.2,mCondition.calculateDiscount(true, true, true, 50));
     }
+
     //Test else if(ismember OR hasCoupon
     @Test
-    public void sexto(){
+    void sexto() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(true, false, false,50),0.10);
+        Assertions.assertEquals(0.10,mCondition.calculateDiscount(true, false, false, 50));
     }
+
     @Test
-    public void septimo(){
+    void septimo() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(true, true, true,120),0.2);
+        Assertions.assertEquals(0.2,mCondition.calculateDiscount(true, true, true, 120));
     }
+
     @Test
-    public void octavo(){
+    void octavo() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(true, false, true,120),0.20);
+        Assertions.assertEquals(0.20,mCondition.calculateDiscount(true, false, true, 120));
     }
+
     @Test
-    public void A(){
+    void A() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(true, false, false,120),0.20);
+        Assertions.assertEquals(0.20,mCondition.calculateDiscount(true, false, false, 120));
     }
 //Test isHoliday
 
     @Test
-    public void noveno(){
+    void noveno() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(false, false, true,50),0.05);
+        Assertions.assertEquals(0.05, mCondition.calculateDiscount(false, false, true, 50));
     }
+
     @Test
-    public void decimo(){
+    void decimo() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(false, false, false,50),0.00);
+        Assertions.assertEquals(0.00,mCondition.calculateDiscount(false, false, false, 50));
     }
+
     @Test
-    public void undecimo(){
+    void undecimo() {
         ModificatedCondition mCondition = new ModificatedCondition();
-        Assertions.assertEquals(mCondition.calculateDiscount(false, false, false,150),0.00);
+        Assertions.assertEquals(0.00, mCondition.calculateDiscount(false, false, false, 150));
     }
 }

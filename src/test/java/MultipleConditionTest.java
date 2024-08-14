@@ -1,26 +1,27 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class MultipleConditionTest {
+class MultipleConditionTest {
     MultipleCondition multiple = new MultipleCondition();
+
     @Test
-    public void testAllConditions(){
-        Assertions.assertEquals("Special Discount Applied" , multiple.checkConditions(true, true,true,true) );
-        Assertions.assertEquals("Special Discount Applied" , multiple.checkConditions(true, true,true,false) );
-        Assertions.assertEquals("Special Discount Applied" , multiple.checkConditions(true, true,false,true) );
-        Assertions.assertEquals("Special Discount Applied" , multiple.checkConditions(true, true,false,false) );
-        Assertions.assertEquals("Special Discount Applied" , multiple.checkConditions(true, false,true,true) );
-        Assertions.assertEquals("No Discount" , multiple.checkConditions(true, false,true,false) );
-        Assertions.assertEquals("No Discount" , multiple.checkConditions(true, false,false,true) );
-        Assertions.assertEquals("No Discount" , multiple.checkConditions(true, false,false,false) );
-        Assertions.assertEquals("Special Discount Applied" , multiple.checkConditions(false, true,true,true) );
-        Assertions.assertEquals("No Discount" , multiple.checkConditions(false, true,true,false) );
-        Assertions.assertEquals("No Discount" , multiple.checkConditions(false, true,false,true) );
-        Assertions.assertEquals("No Discount" , multiple.checkConditions(false, true,false,false) );
-        Assertions.assertEquals("Special Discount Applied" , multiple.checkConditions(false, false,true,true) );
-        Assertions.assertEquals("No Discount" , multiple.checkConditions(false, false,true,false) );
-        Assertions.assertEquals("No Discount" , multiple.checkConditions(false, false,false,true) );
-        Assertions.assertEquals("No Discount" , multiple.checkConditions(false, false,false,false) );
+    void testAllConditions() {
+        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(true, true, true, true));
+        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(true, true, true, false));
+        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(true, true, false, true));
+        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(true, true, false, false));
+        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(true, false, true, true));
+        Assertions.assertEquals("No Discount", multiple.checkConditions(true, false, true, false));
+        Assertions.assertEquals("No Discount", multiple.checkConditions(true, false, false, true));
+        Assertions.assertEquals("No Discount", multiple.checkConditions(true, false, false, false));
+        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(false, true, true, true));
+        Assertions.assertEquals("No Discount", multiple.checkConditions(false, true, true, false));
+        Assertions.assertEquals("No Discount", multiple.checkConditions(false, true, false, true));
+        Assertions.assertEquals("No Discount", multiple.checkConditions(false, true, false, false));
+        Assertions.assertEquals("Special Discount Applied", multiple.checkConditions(false, false, true, true));
+        Assertions.assertEquals("No Discount", multiple.checkConditions(false, false, true, false));
+        Assertions.assertEquals("No Discount", multiple.checkConditions(false, false, false, true));
+        Assertions.assertEquals("No Discount", multiple.checkConditions(false, false, false, false));
 
     }
 
